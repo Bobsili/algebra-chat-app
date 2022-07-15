@@ -1,10 +1,7 @@
+import { JoinPage } from "./pages/JoinPage";
 
 function App() {
-  return (
-    <div className="App">
-      Hello World!
-    </div>
-  );
+  return <JoinPage />
 }
 
 export default App;

@@ -1,8 +1,8 @@
-@import "./styles/variables";
+@import "./styles/index";
 @import "the-new-css-reset";
 
 html {
-  font-size: $size-rem;
+  font-size: 62.5%;
 }
 
 body {
