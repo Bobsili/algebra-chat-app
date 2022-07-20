@@ -6,13 +6,13 @@ import { MessageForm } from "../../components/MessageForm";
 export function ChatPage(props) {
   if (props.error !== null) {
     return (
-      <div className="chat-page">Failed to connect to chat room.</div>
+      <div className="alert">Failed to connect to chat room.</div>
     );
   }
 
   if (!props.joinedRoom) {
     return (
-      <div className="chat-page">Joining room, please wait...</div>
+      <div className="alert">Joining room, please wait...</div>
     );
   }
 
@@ -31,7 +31,8 @@ export function ChatPage(props) {
 
   return (
     <div className="chat-page">
-      <div className="chat-page__title">Chat with friends</div>
+      <div className="chat-page__title">Dogovori za kviz</div>
+      <div className="chat-page__info">Tko ne dođe idući put plaća rundu!</div>
       <div className="chat-page__message-list">
         {messageItems}
       </div>

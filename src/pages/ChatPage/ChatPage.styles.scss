@@ -10,6 +10,11 @@
   max-width: 400px;
   margin: 0 auto;
 
+  &__info {
+    @include type($font-size: 1.2rem, $font-weight: 300, $color: #080808);
+    text-align: center;
+  }
+
   &__title {
     @include type($font-size: 2.4rem, $font-weight: 700, $color: #b71c1c);
     font-family: 'Poppins', sans-serif;
@@ -40,4 +45,13 @@
     flex: 0 0 auto;
     margin: 16px 0;
   }
+}
+
+.alert {
+  @include type($font-size: 2.4rem, $font-weight: 700);
+  text-align: center;
+  background-color: $color-theme;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

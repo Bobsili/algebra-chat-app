@@ -9,6 +9,11 @@
   background-color: $color-theme;
 }
 
+.button:hover {
+  background-color: #e59292;
+  transition: all 1s ease;
+}
+
 .button.button--text {
   @include type($font-weight: 700);
   @include shape('rounded');
