@@ -5,15 +5,19 @@
   flex-flow: column nowrap;
   justify-content: stretch;
   align-items: stretch;
-  height: 100vh;
-  width: calc(100% - #{2 * $size-wrapper-margin});
+  height: 90vh;
+  // width: calc(100% - #{2 * $size-wrapper-margin});
+  max-width: 400px;
   margin: 0 auto;
 
   &__title {
-    @include type($font-size: 2.4rem, $font-weight: 700);
+    @include type($font-size: 2.4rem, $font-weight: 700, $color: #b71c1c);
+    font-family: 'Poppins', sans-serif;
+    color: $color-theme-inverted;
     flex: 0 0 auto;
     margin: 24px 0;
     text-align: center;
+    text-decoration: underline;
   }
 
   &__message-list {
@@ -22,7 +26,10 @@
   }
 
   &__message-list-item {
+    @include shape('rounded-border');
     margin-bottom: 8px;
+    background-color: #ffcdd2; //
+    border: none;
 
     &:last-child {
       margin-bottom: 0;
