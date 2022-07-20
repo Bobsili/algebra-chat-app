@@ -1,16 +1,12 @@
-import { Message } from "./components/Message";
+
+import { useUser } from "./contexts/UserContext";
+import { ChatPage } from "./pages/ChatPage";
+import { JoinPage } from "./pages/JoinPage/JoinPage.component";
 
 function App() {
-  return (
-    <Message
-      avatarBackgroundColor="green"
-      avatarText="BD"
-      displayName="Bogdanka Dimitrijević"
-      time="20:50"
-    >
-      Ready for the trip? I'm so excited I couldn't sleep!
-    </Message>
-  );
+  const { joined } = useUser();
+
+  return joined ? <ChatPage /> : <JoinPage />;
 }
 
 export default App;
