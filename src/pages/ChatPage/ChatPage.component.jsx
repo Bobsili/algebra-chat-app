@@ -12,7 +12,8 @@ export function ChatPage(props) {
 
   if (!props.joinedRoom) {
     return (
-      <div className="alert">Joining room, please wait...</div>
+      <div className="chat-page loader"></div>
+      // <div className="alert">Joining room, please wait...</div>
     );
   }
 
@@ -32,7 +33,7 @@ export function ChatPage(props) {
   return (
     <div className="chat-page">
       <div className="chat-page__title">Dogovori za kviz</div>
-      <div className="chat-page__info">Tko ne dođe idući put plaća rundu!</div>
+      <div className="chat-page__info">OBAVIJEST: Tko ne dođe, idući put plaća rundu!</div>
       <div className="chat-page__message-list">
         {messageItems}
       </div>

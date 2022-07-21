@@ -3,6 +3,7 @@
   flex-flow: row nowrap;
   justify-content: stretch;
   align-items: flex-start;
+  animation: fade-in 1s ease;
 
   &__avatar {
     flex: 0 0 auto;
@@ -13,5 +14,37 @@
   &__text {
     flex: 1 1 auto;
     display: block;
+  }
+
+  &.my-message {
+    flex-flow: row-reverse nowrap;
+    .message__avatar {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+    .message__text {
+      flex: initial;
+      .message-text {
+        text-align: right;
+        .message-metadata {
+          flex-flow: row-reverse nowrap;
+          .message-metadata__display-name {
+            margin-right: 0;
+            margin-left: 8px;
+          }
+        }
+        .message-text__content {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    } to {
+      opacity: 1;
+    }
   }
 }

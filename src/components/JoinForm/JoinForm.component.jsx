@@ -12,7 +12,7 @@ export function JoinForm(props) {
     >
       <div className="join-form__field">
         <InputFormField
-          label="Display name"
+          label="Član ekipe:"
           name="displayName"
           id="display-name"
           onChange={props.onChange}
@@ -21,7 +21,7 @@ export function JoinForm(props) {
         />
       </div>
       <div className="join-form__field">
-        <Button variant="text">Join</Button>
+        <Button variant="text">Priduži se!</Button>
       </div>
     </form>
   );
